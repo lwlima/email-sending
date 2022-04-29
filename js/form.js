@@ -10,7 +10,7 @@ let send = (e) => {
     const formData = new FormData(myForm);
 
     fetch('./php/send.php', {
-        method: 'post',
+        method: 'POST',
         body: formData
     }).then(function (response) {
         if (response.ok)
