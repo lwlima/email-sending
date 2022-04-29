@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Envio de Email</title>
+
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    
+    <h1 class="text-center my-5">Formulário Contato</h1>
+    <form id="formbudget" method="POST" class="needs-validation" novalidate>
+        <div class="row">
+            <div class="col-10 col-md-5 mx-auto">
+                <label for="nome" class="form-label">Seu nome</label>
+                <div class="input-group mb-3">
+                    <input placeholder="Nome" type="text" class="form-control" id="nome" name="nome" required>
+                    <div class="invalid-feedback">
+                        Por favor digite um nome válido.
+                    </div>
+                </div>
+
+                <label for="email" class="form-label">E-mail</label>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@email.com"
+                        required>
+                    <div class="invalid-feedback">
+                        Por favor digite um nome válido.
+                    </div>
+                </div>
+
+                <label for="telefone" class="form-label">Telefone</label>
+                <div class="input-group mb-3">
+                    <input type="tel" class="form-control" id="telefone" name="telefone"
+                        pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" placeholder="(DD)00000-0000" required>
+                    <div class="invalid-feedback">
+                        Por favor digite um nome válido.
+                    </div>
+                </div>
+                <label for="msg" class="form-label">Mensagem:</label>
+                <div class="input-group mb-3">
+                    <textarea class="form-control" id="msg" name="msg" rows="8" placeholder="Mensagem"
+                        required></textarea>
+                    <div class="invalid-feedback">
+                        Por favor digite um nome válido.
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="send" type="submit">Enviar</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-10 col-md-5 mx-auto my-3" id="response" role="alert">
+            </div>
+        </div>
+    </form>
 </body>
+
 </html>
