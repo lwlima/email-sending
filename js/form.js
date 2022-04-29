@@ -4,7 +4,7 @@ let send = (e) => {
     e.preventDefault();
     const formData = new FormData(myForm);
 
-    fetch('/php/send.php', {
+    fetch('./php/send.php', {
         method: 'post',
         body: formData
     }).then(function (response) {
